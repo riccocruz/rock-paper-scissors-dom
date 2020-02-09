@@ -5,8 +5,20 @@
   <meta charset="UTF-8"/>
 </head>
 <body>
-  <script>
-    // Your JavaScript goes here!
+<!-- <div id="container"></div> -->
+
+<div id="container">
+    <button id="1">One</button>
+    <button id="2">Two</button>
+    <button id="3">Three</button>
+</div>
+</body>
+</html>
+
+<script>
+    
+
+    
     function computerPlay() {
         n = Math.floor(Math.random() * 3);
         if (n == 0) {
@@ -52,20 +64,20 @@
         playerScore = 0;
         computerScore = 0;
 
-        for (i = 0; i < 5; ++ i) {
-            playerSelection = window.prompt();
-            computerSelection = computerPlay();
+        // for (i = 0; i < 5; ++ i) {
+        //     playerSelection = window.prompt();
+        //     computerSelection = computerPlay();
 
-            results = playRound(playerSelection, computerSelection);
+        //     results = playRound(playerSelection, computerSelection);
 
-            if (results.startsWith("You win.")) {
-                ++playerScore;
-            } else if (results.startsWith("You lose.")) {
-                ++computerScore;
-            }
-            console.log("Player: " + playerSelection + " Computer: " + computerSelection + " " + results);
-            console.log("\tPlayer Score: " + playerScore + " Computer Score: " + computerScore);
-        }
+        //     if (results.startsWith("You win.")) {
+        //         ++playerScore;
+        //     } else if (results.startsWith("You lose.")) {
+        //         ++computerScore;
+        //     }
+        //     console.log("Player: " + playerSelection + " Computer: " + computerSelection + " " + results);
+        //     console.log("\tPlayer Score: " + playerScore + " Computer Score: " + computerScore);
+        // }
 
         if (playerScore > computerScore) {
             console.log("You win!");
@@ -77,6 +89,4 @@
     }
 
     game();
-  </script>
-</body>
-</html>
+</script>
